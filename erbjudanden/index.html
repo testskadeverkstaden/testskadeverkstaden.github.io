@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Våra erbjudanden - Skadeverkstaden i Varalöv</title>
+	<link rel="canonical" href="http://skadeverkstaden.se/erbjudanden/">
+	<meta property="og:url" content="http://skadeverkstaden.se/erbjudanden/" />
+	<meta property="og:locale" content="sv_SE" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Våra erbjudanden" />
+	
+	<meta property="og:site_name" content="Skadeverkstaden i Varalöv" />
+	<link rel='stylesheet' id='font-awesome-css'  href='/content/plugins/ultra-content-elements/fonts/font-awesome.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='swm-global-css'  href='/content/plugins/ultra-content-elements/css/global.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='swm-shortcodes-css'  href='/content/plugins/ultra-content-elements/css/shortcodes.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='swm-widgets-css'  href='/content/plugins/ultra-content-elements/css/widgets.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='font-icons-css'  href='/content/themes/thinker/fonts/font-awesome.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='main-css-css'  href='/content/themes/thinker/style.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='google-font-heading-css'  href='https://fonts.googleapis.com/css?family=Arimo%3A300%2C400%2C400italic%2C500%2C600%2C700%2C700italic&amp;subset=latin%2Cgreek-ext%2Ccyrillic%2Clatin-ext%2Cgreek%2Ccyrillic-ext%2Cvietnamese' type='text/css' media='all' />
+	<link rel='stylesheet' id='prettyphoto-css'  href='/content/themes/thinker/css/prettyphoto.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='screen-css'  href='/content/themes/thinker/screen.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='responsive-css'  href='/content/themes/thinker/responsive.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='retina-css'  href='/content/themes/thinker/retina.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='custom-css'  href='/content/themes/thinker/custom.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='rs-plugin-settings-css'  href='/content/plugins/revslider/rs-plugin/css/settings.css' type='text/css' media='all' />
+	<style id='rs-plugin-settings-inline-css' type='text/css'>
+	.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+	</style>
+	<link rel='stylesheet' id='child-theme-style-css'  href='/content/themes/thinker-child-theme/child-theme-style.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='plugin-fix-css'  href='/content/themes/thinker/plugin-fix.css' type='text/css' media='all' />
+	<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js'></script>
+	<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+	<script type='text/javascript' src='/content/themes/thinker/js/modernizer.js'></script>
+	<script type='text/javascript' src='/content/plugins/revslider/rs-plugin/js/jquery.themepunch.tools.min.js'></script>
+	<script type='text/javascript' src='/content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js'></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			// CUSTOM AJAX CONTENT LOADING FUNCTION
+			var ajaxRevslider = function(obj) {
+			
+				// obj.type : Post Type
+				// obj.id : ID of Content to Load
+				// obj.aspectratio : The Aspect Ratio of the Container / Media
+				// obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
+				
+				var content = "";
+
+				data = {};
+				
+				data.action = 'revslider_ajax_call_front';
+				data.client_action = 'get_slider_html';
+				data.token = 'ed959203f9';
+				data.type = obj.type;
+				data.id = obj.id;
+				data.aspectratio = obj.aspectratio;
+								
+				 // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
+				 return content;						 
+			};
+			
+			// CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
+			var ajaxRemoveRevslider = function(obj) {
+				return jQuery(obj.selector+" .rev_slider").revkill();
+			};
+
+			// EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION
+			var extendessential = setInterval(function() {
+				if (jQuery.fn.tpessential != undefined) {
+					clearInterval(extendessential);
+					if(typeof(jQuery.fn.tpessential.defaults) !== 'undefined') {
+						jQuery.fn.tpessential.defaults.ajaxTypes.push({type:"revslider",func:ajaxRevslider,killfunc:ajaxRemoveRevslider,openAnimationSpeed:0.3});   
+						// type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
+						// func: the Function Name which is Called once the Item with the Post Type has been clicked
+						// killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
+						// openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)
+					}
+				}
+			},30);
+		});
+	</script>
+	<style type="text/css">#intro_header { background:transparent ; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }.tp-rightarrow.default,.tp-leftarrow.default { text-align: center; font-size: 30px; }
+	.tp-rightarrow.default,.tp-leftarrow.default {	 width:40px; height:41px; border-radius: 0;	display:block; }
+	.tp-rightarrow.default { right:0; margin:0; background: rgba(0,0,0,0.6) url(content/themes/thinker-child-theme/images/backgrounds/arrow-right.png) no-repeat 12px 12px; border-radius: 3px 0 0 3px; }
+	.tp-leftarrow.default { left:0; margin:0; background: rgba(0,0,0,0.6) url(content/themes/thinker-child-theme/images/backgrounds/arrow-left.png) no-repeat 10px 12px; border-radius: 0 3px 3px 0; }
+	.tp-bullets.simplebullets.round-old .bullet { cursor:pointer; position:relative;	display:inline; background: rgba(0,0,0,0.36);	width:10px;	height:10px;  margin-right:6px; float:left; margin-top:0px; border-radius: 100px;}
+	.tp-bullets.simplebullets.round-old .bullet.selected,.tp-bullets.simplebullets.round-old .bullet:hover {  background: rgba(0,0,0,0.7); margin-top:0; display:inline; float:left;}
+	.tp-bullets.simplebullets.round-old .bullet.last {	clear:none; } </style><!--[if IE 8]><style type="text/css" media="screen"> @import "http://skadeverkstaden.se/content/themes/thinker/css/ie8.css";</style><![endif]--><!--[if IE 9]><style type="text/css" media="screen"> @import "http://skadeverkstaden.se/content/themes/thinker/css/ie9.css";</style><![endif]-->		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+
+  <body class="home page page-template page-template-template-fullwidth page-template-template-fullwidth-php swm_fixed_layout">
+
+    <section id="logo_header" class="swm_box_shadow">
+	<div id="logo_header_wrap">
+		<div class="logo">
+			<a href="/">
+				<img src="/layout/skadeverkstaden.png" width="340" alt="Skadeverkstaden i Varalöv" />
+			</a>
+		</div>
+		
+		<nav class="top-menu">
+			<ul id="nav" class="sf-menu">
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Hem</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/vad-vi-gor">Vad vi gör</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+					<a href="/reparationer/">Reparationer</a>
+					<ul class="sub-menu">
+						
+						
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+							<a href="/reparationer/bakgavel/">Bakgavel med backskada</a>
+						</li>
+						
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+							<a href="/reparationer/bakre-gavel-och-kjol/">Bakgavel och sidokjol</a>
+						</li>
+						
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+							<a href="/reparationer/lastrum-golv/">Lastrumsgolv med fuktskada</a>
+						</li>
+						
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+							<a href="/reparationer/stotfangare-fram/">Stötfångare fram</a>
+						</li>
+						
+					</ul>
+				</li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+					<a href="/erbjudanden/">Erbjudanden</a>
+					<ul class="sub-menu">
+						
+						
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+							<a href="/erbjudanden/erbjudanden">Service husbil och Bromsjustering</a>
+						</li>
+						
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+							<a href="/erbjudanden/fukt-gastest">Fukttest och Gastest</a>
+						</li>
+						
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+							<a href="/erbjudanden/uppstallning">Uppställningsplats</a>
+						</li>
+						
+					</ul>
+				</li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/kontakta-oss">Kontakta oss</a></li>
+			</ul>
+		</nav>
+		<div class="clear"></div>
+	</div>
+</section>
+
+	<section id="intro_header" style="background: transparent url(/layout/headingbackground.jpg) repeat center center; -webkit-box-shadow: inset 0 0 10px #fcb708; -moz-box-shadow: inset 0 0 10px #fcb708; box-shadow: inset 0 0 10px #fcb708;">
+    <div class="intro_header_wrap">
+        <div class="intro_header_style_text">
+            <div class="title_text">Våra erbjudanden</div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</section>
+<section id="container" class="swm_box_shadow">
+    <div id="content">
+        <div class="swm_fancy_box round5">
+            <div class="title_text" style="color: #000000; background-color: #fcb708;">Tester:</div>
+            <div class="fancy_text" style="font-size: 16px;">
+                <a href="fukt-och-gastest">Fukt- och gastest med fast pris.</a> <br />
+                <br />
+                Genomför ett test, eller varför inte få lite rabatt genom att genföra båda vid samma tillfälle. <br />
+                Känn dig trygg att allt är säkert och problemfritt.
+            </div>
+        </div>
+        <div class="swm_fancy_box round5">
+            <div class="title_text" style="color: #000000; background-color: #fcb708;">Service och bromsar:</div>
+            <div class="fancy_text" style="font-size: 16px;">
+                <a href="erbjudanden">Service eller bromsjustering.</a><br />
+                <br />
+                <img src="/content/service.jpg" alt="Service"><br />
+                <br />
+                Är det dags för service, besiktning, eller längre semester? <br />
+                Då känns det skönt att ha service och justerade bromsar avklarat.
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="footer_copyright_info">
+		<p>Skadeverkstaden AB / Helsingborgsvägen 591, 26296 Varalöv, Ängelholm / Tel 042 - 21 20 02</p>
+</section>	
+
+<div id="topmenu-icon-subtext" data-sub1="" data-sub2="" data-sub3="" data-sub4="" data-sub5="" data-sub6="" data-sub7="" data-sub8="" data-sub9="" data-sub10="" ></div>
+<script type='text/javascript' src='/content/plugins/ultra-content-elements/js/jquery-plugins.js'></script>
+<script type='text/javascript' src='/content/plugins/ultra-content-elements/js/validate.js'></script>
+<script type='text/javascript' src='/content/plugins/ultra-content-elements/js/isotope.js'></script>
+<script type='text/javascript' src='/content/plugins/ultra-content-elements/js/custom-scripts.js'></script>
+<script type='text/javascript' src='/content/themes/thinker/js/jquery-core-plugins.js'></script>
+<script type='text/javascript' src='/content/themes/thinker/js/jquery-plugins.js'></script>
+<script type='text/javascript' src='/content/themes/thinker/js/theme-settings.js'></script>
+<script type='text/javascript' src='/content/themes/thinker/js/portfolio-sortable.js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js'></script>
+
+
+  </body>
+
+</html>
